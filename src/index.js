@@ -2,17 +2,32 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-const title = "Dog Man: Twenty Thousand Fleas Under the Sea";
-const img =
-  "https://images-na.ssl-images-amazon.com/images/I/81fyoFoaxlL._AC_UL600_SR600,400_.jpg";
-const author = "Dav Pil";
+
+const firstBook = {
+  author: "Dav Pil",
+  title: "Dog Man: Twenty Thousand Fleas Under the Sea",
+  img: "https://images-na.ssl-images-amazon.com/images/I/81fyoFoaxlL._AC_UL600_SR600,400_.jpg",
+};
+
+const secondBook = {
+  author: "Bessel Van",
+  title: "The Body Keeps The Score",
+  img: "https://images-na.ssl-images-amazon.com/images/I/71bVExi4yXL._AC_UL600_SR600,400_.jpg",
+};
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img}
+      />
+      <Book
+        author={secondBook.author}
+        title={secondBook.title}
+        img={secondBook.img}
+      />
     </section>
   );
 };
